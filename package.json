@@ -1,0 +1,32 @@
+{
+  "name": "lokroids-js",
+  "version": "1.0.0",
+  "description": "Aplicación para clasificación y entrenamiento identificador de estado",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alffore/lokroids-js.git"
+  },
+  "keywords": [
+    "Lokro",
+    "vigilia",
+    "dormido",
+    "ai",
+    "cnn"
+  ],
+  "author": "AAFR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alffore/lokroids-js/issues"
+  },
+  "homepage": "https://github.com/alffore/lokroids-js#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.2"
+  }
+}

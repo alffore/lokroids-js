@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EJS demo</title>
+</head>
+
+<body>
+    <% include partes/header %>
+        <h1>
+            <%=titulo%>
+        </h1>
+
+        <form method="POST" action="/clasi/ajusta">
+
+            <input type="text" name="nombre">
+            <br>
+            <input type="submit">
+
+        </form>
+</body>
+
+</html>
