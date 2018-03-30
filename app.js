@@ -65,6 +65,7 @@ app.get('/', function(req, res) {
 app.post('/clasi/ajusta', function(req, res) {
 
     console.log(req.body.nombre);
+    res.render('index', { titulo: "Entrada: " + req.body.nombre });
 });
 
 
