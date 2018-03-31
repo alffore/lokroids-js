@@ -4,6 +4,14 @@ var path = require('path')
 
 var app = express()
 
+// middleware
+/* var logger = function(req, res, next) {
+    console.log('Logging...');
+    next();
+}
+
+app.use(logger); */
+
 // view engine
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'vistas'))
@@ -16,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'publico')))
 
 // routing
-// puro contenido dinámico
+// puro contenido dinamico
 
 app.get('/salest', function (req, res) {
   res.send('Hola mundo')
@@ -34,7 +42,7 @@ app.get('/json', function (req, res) {
 })
 
 // routing contenido dinamico templates
-app.get('/dinamico', function (req, res) {
+app.get('/', function (req, res) {
   res.render('index', { titulo: ' Hola Mundo' })
 })
 

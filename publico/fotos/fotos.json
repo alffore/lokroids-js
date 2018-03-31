@@ -1,0 +1,20 @@
+{
+    "entradas":[
+        {
+            "imagen_url": "//127.0.0.1:3000/fotos/lokro1.jpg",
+            "clasificado": "despierto",
+            "id": 1
+        },
+        {
+            "imagen_url": "//127.0.0.1:3000/fotos/lokro2.jpg",
+            "clasificado": "dormido",
+            "id": 2
+        },
+        {
+            "imagen_url": "//127.0.0.1:3000/fotos/lokro3.jpg",
+            "clasificado": "",
+            "id": 3
+        }
+
+    ]
+}
