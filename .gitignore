@@ -57,3 +57,6 @@ typings/
 # dotenv environment variables file
 .env
 
+#ignoramos todas las imagenes
+publico/imagenes/*.jpg
+publico/imagenes_clas/
