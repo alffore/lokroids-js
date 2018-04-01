@@ -1,12 +1,12 @@
 var express = require('express')
 var bodyParser = require('body-parser')
 var path = require('path')
+var fs = require('fs')
 
 var app = express()
 
-// view engine
-//app.set('view engine', 'ejs')
-//app.set('views', path.join(__dirname, 'vistas'))
+var PATH_IMG = path.join(__dirname, 'publico/imagenes/')
+
 
 // Body Parser Middleware
 app.use(bodyParser.json())
@@ -15,12 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // recursos estaticos
 app.use(express.static(path.join(__dirname, 'publico')))
 
-// routing
-// puro contenido dinámico
 
-app.get('/salest', function(req, res) {
-    res.send('Hola mundo')
-})
 
 // routing
 // JSON
@@ -33,18 +28,6 @@ app.get('/json', function(req, res) {
     res.json(persona)
 })
 
-// routing contenido dinamico templates
-/*app.get('/dinamico', function(req, res) {
-    res.render('index', { titulo: ' Hola Mundo' })
-})
-
-app.post('/clasi/ajusta', function(req, res) {
-    guardaClasifica(req);
-
-    res.render('index', { titulo: 'Entrada: ' + req.body.nombre })
-
-})*/
-
 app.get('/mestado/:id', (req, res) => {
     guardaClasifica(req, res)
 
@@ -54,11 +37,29 @@ app.listen(3000, function() {
     console.log('escucha 3000')
 })
 
-
+/*
+ * Función que guarda la clasificación propuesta 
+ */
 function guardaClasifica(req, res) {
 
     var aux = req.params.id.split("_")
     console.log(aux)
+
+    var estatus = '';
+    if (aux[0] === 'mdes') {
+        estatus = 'despierto'
+    } else if (aux[0] === 'mdor') {
+        estatus = 'dormido'
+    }
+
+    var archivo = PATH_IMG + aux[1] + '.txt'
+
+    fs.writeFile(archivo, estatus, function(err) {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("Archivo escrito en " + archivo)
+    });
 
 
     res.json(persona)
