@@ -1,3 +1,4 @@
+const url_base = '//127.0.0.1:3000/'
 const main = document.querySelector('main')
 
 window.addEventListener('load', async e => {
@@ -5,7 +6,8 @@ window.addEventListener('load', async e => {
 })
 
 async function actualizaLista() {
-    const res = await fetch(`//127.0.0.1:3000/imagenes/fotos.json`)
+    //const res = await fetch(`${url_base}imagenes/fotos.json`)
+    const res = await fetch(`${url_base}json`)
     const json = await res.json()
 
     main.innerHTML = json.entradas.map(creaEntrada).join('\n')
