@@ -39,7 +39,7 @@ function creaEntrada(entrada) {
     }
 
     return `<div class="article">
-          <div class="foto_id">${entrada.id}</div>
+          <div class="foto_id">id: ${entrada.id}</div>
           <div class="imagen_foto"><img src="${entrada.imagen_url}" width="240"></div>
             <div class="clasificacion">
             <input type="radio" value="despierto" name="estado${entrada.id}" class="mdes" id="mdes_${entrada.nimg}_${entrada.id}" ${marcades}> despierto

@@ -8,7 +8,6 @@ var app = express()
 var PATH_IMG = path.join(__dirname, 'publico/imagenes/')
 var PATH_URL = '//127.0.0.1:3000/'
 
-var id_imagen = 1
 
 
 // Body Parser Middleware
@@ -92,33 +91,14 @@ function leeCreaJSON(req, res) {
         }
         files.forEach(element => {
             var ae = element.split('.');
-            if (ae[1] == 'jpg') {
+            if (ae[1] == 'json') {
 
-                var clasificado = '';
-                var aux = {
-                    imagen_url: `${PATH_URL}imagenes/${element}`,
-                    clasificado: `${clasificado}`,
-                    nimg: `${ae[0]}`,
-                    id: `${id_imagen}`
-                }
-                id_imagen++
+                var aux = JSON.parse(fs.readFileSync(`${PATH_IMG}${element}`, 'utf8'));
                 aImg.entradas.push(aux)
 
             }
         })
 
-        aImg.entradas.forEach(element => {
-            fs.readFile(`${PATH_IMG}${element.nimg}.txt`, 'utf8', function(err, data) {
-                if (err == null) {
-                    //console.log(`${element.nimg} ${data}`)
-                    element.clasificado = data
-                }
-
-            })
-        })
-
-
-        id_imagen = 1
         res.json(aImg)
     })
 
