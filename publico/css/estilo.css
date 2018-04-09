@@ -3,10 +3,14 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
+main {
+    column-width: 300px;
+}
+
 .article {
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 300px;
+    /*margin-left: auto;
+    margin-right: auto;*/
     border: 1px #ccc solid;
     border-radius: 5px;
     display: flex;
