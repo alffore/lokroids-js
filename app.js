@@ -6,7 +6,7 @@ var fs = require('fs')
 var app = express()
 
 var PATH_IMG = path.join(__dirname, 'publico/imagenes/')
-var PATH_URL = '//127.0.0.1:3000/'
+var PATH_URL = '//192.168.1.73:3000/'
 
 
 
