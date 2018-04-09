@@ -30,15 +30,19 @@ function creaEntrada(entrada) {
     var marcades = ''
     var marcador = ''
 
+    var estilo_bloque = 'article'
+
     if (entrada.clasificado === 'despierto') {
         marcades = 'checked'
+        estilo_bloque = 'article_des'
     }
 
     if (entrada.clasificado === 'dormido') {
         marcador = 'checked'
+        estilo_bloque = 'article_dor'
     }
 
-    return `<div class="article">
+    return `<div class="${estilo_bloque}">
           <div class="foto_id">id: ${entrada.id}</div>
           <div class="imagen_foto"><img src="${entrada.imagen_url}" width="240"></div>
             <div class="clasificacion">
