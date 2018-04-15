@@ -3,7 +3,7 @@ var bodyParser = require('body-parser')
 var path = require('path')
 var fs = require('fs')
 
-var miip = require('./mip')
+var miip = require('./miip')
 guardaIP()
 
 var app = express()
