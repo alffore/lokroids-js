@@ -30,7 +30,7 @@ function mueveArchivo (archivo) {
   var obj
   var ae = archivo.split('.')
 
-  fs.readFile('file', 'utf8', (err, data) => {
+  fs.readFile(archivo, 'utf8', (err, data) => {
     if (err) throw err
     obj = JSON.parse(data)
     if (obj.clasificado.length > 0) {
