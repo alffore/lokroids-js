@@ -34,11 +34,15 @@ function mueveArchivo (archivo) {
     if (err) throw err
     obj = JSON.parse(data)
     if (obj.clasificado.length > 0) {
-      console.log(`${PATH_IMG}${archivo} => ${PATH_IMGC}${obj.clasificado}${archivo}`)
-      /* fs.rename('/tmp/test.txt', '/home/dtron/testCopy.txt', (err) => {
+      
+      fs.rename(`${PATH_IMG}${archivo}`, `${PATH_IMGC}${obj.clasificado}/${archivo}`, (err) => {
         if (err) throw err
-        console.log('Move complete.')
-      }) */
+        console.log(`${PATH_IMG}${archivo} => ${PATH_IMGC}${obj.clasificado}/${archivo}`)
+      })
+      fs.rename(`${PATH_IMG}${ae[0]}.jpg`, `${PATH_IMGC}${obj.clasificado}/${ae[0]}.jpg`, (err) => {
+        if (err) throw err
+        console.log(`${PATH_IMG}${ae[0]}.jpg => ${PATH_IMGC}${obj.clasificado}/${ae[0]}.jpg`)
+      })
     }
   })
 }
