@@ -94,7 +94,7 @@ function leeCreaJSON (req, res) {
 function guardaIP () {
   var auxjson = {'ip': `${miip()}`}
 
-  var archivo = PATH_PUB + 'ipdir.json'
+  var archivo =  '/mnt/lokros/ipdir.json'
 
   fs.writeFile(archivo, JSON.stringify(auxjson), err => {
     if (err) {
