@@ -1,4 +1,4 @@
-const url_base = '//192.168.1.70:3000/'
+const urlBase = '//192.168.1.70:3000/'
 const main = document.querySelector('main')
 
 window.addEventListener('load', async e => {
@@ -7,7 +7,7 @@ window.addEventListener('load', async e => {
 
 async function actualizaLista () {
     // const res = await fetch(`${url_base}imagenes/fotos.json`)
-  const res = await fetch(`${url_base}json`)
+  const res = await fetch(`${urlBase}json`)
   const json = await res.json()
 
   main.innerHTML = json.entradas.map(creaEntrada).join('\n')
@@ -30,19 +30,19 @@ function creaEntrada (entrada) {
   var marcades = ''
   var marcador = ''
 
-  var estilo_bloque = 'article'
+  var estilobloque = 'article'
 
   if (entrada.clasificado === 'despierto') {
     marcades = 'checked'
-    estilo_bloque = 'article_des'
+    estilobloque = 'article_des'
   }
 
   if (entrada.clasificado === 'dormido') {
     marcador = 'checked'
-    estilo_bloque = 'article_dor'
+    estilobloque = 'article_dor'
   }
 
-  return `<div class="${estilo_bloque}">
+  return `<div class="${estilobloque}">
           <div class="foto_id">id: ${entrada.id}</div>
           <div class="imagen_foto"><img src="${entrada.imagen_url}" width="240"></div>
             <div class="clasificacion">
@@ -53,5 +53,5 @@ function creaEntrada (entrada) {
 }
 
 function marcaEstado (objEstado) {
-  fetch(`${url_base}mestado/${objEstado.id}`)
+  fetch(`${urlBase}mestado/${objEstado.id}`)
 }

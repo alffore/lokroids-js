@@ -3,10 +3,14 @@ var bodyParser = require('body-parser')
 var path = require('path')
 var fs = require('fs')
 
+var miip = require('./mip')
+guardaIP()
+
 var app = express()
 
+var PATH_PUB = path.join(__dirname, 'publico/')
 var PATH_IMG = path.join(__dirname, 'publico/imagenes/')
-var PATH_URL = '//192.168.1.70:3000/'
+var PATH_URL = `'//${miip()}:3000/'`
 
 // Body Parser Middleware
 app.use(bodyParser.json())
@@ -45,7 +49,7 @@ function guardaClasifica (req, res) {
 
   var archivo = PATH_IMG + aux[1] + '.json'
 
-  var aux_json = {
+  var auxjson = {
     imagen_url: `${PATH_URL}imagenes/${aux[1]}.jpg`,
     clasificado: `${estatus}`,
     nimg: `${aux[1]}`,
@@ -53,13 +57,13 @@ function guardaClasifica (req, res) {
     ch: 1
   }
 
-  fs.writeFile(archivo, JSON.stringify(aux_json), function (err) {
+  fs.writeFile(archivo, JSON.stringify(auxjson), function (err) {
     if (err) {
       return console.log(err)
     }
   })
 
-  res.json(aux_json)
+  res.json(auxjson)
 }
 
 /**
@@ -75,12 +79,26 @@ function leeCreaJSON (req, res) {
     files.forEach(element => {
       var ae = element.split('.')
       if (ae[1] === 'json') {
-          var aux = JSON.parse(fs.readFileSync(`${PATH_IMG}${element}`, 'utf8'))
-          aImg.entradas.push(aux)
-        }
+        var aux = JSON.parse(fs.readFileSync(`${PATH_IMG}${element}`, 'utf8'))
+        aImg.entradas.push(aux)
+      }
     })
 
     res.json(aImg)
-    console.log(req.connection.localAddress)
+  })
+}
+
+/**
+ * Función que guarda la IP para el consumo de diversas partes de la app
+ */
+function guardaIP () {
+  var auxjson = {'ip': `${miip()}`}
+
+  var archivo = PATH_PUB + 'ipdir.json'
+
+  fs.writeFile(archivo, JSON.stringify(auxjson), err => {
+    if (err) {
+      return console.log(err)
+    }
   })
 }
