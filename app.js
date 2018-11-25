@@ -8,7 +8,7 @@ guardaIP()
 
 var app = express()
 
-var PATH_PUB = path.join(__dirname, 'publico/')
+// var PATH_PUB = path.join(__dirname, 'publico/')
 var PATH_IMG = path.join(__dirname, 'publico/imagenes/')
 var PATH_URL = `//${miip()}:3000/`
 
