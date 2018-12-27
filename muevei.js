@@ -34,7 +34,6 @@ function mueveArchivo (archivo) {
     if (err) throw err
     obj = JSON.parse(data)
     if (obj.clasificado.length > 0) {
-      
       fs.rename(`${PATH_IMG}${archivo}`, `${PATH_IMGC}${obj.clasificado}/${archivo}`, (err) => {
         if (err) throw err
         console.log(`${PATH_IMG}${archivo} => ${PATH_IMGC}${obj.clasificado}/${archivo}`)
