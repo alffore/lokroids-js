@@ -1,4 +1,4 @@
-const urlBase = '//192.168.1.70:3000/'
+const urlBase = '//192.168.1.72:3000/'
 const main = document.querySelector('main')
 
 window.addEventListener('load', async e => {
