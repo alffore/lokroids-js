@@ -79,7 +79,7 @@ function leeCreaJSON (req, res) {
     files.forEach(element => {
       var ae = element.split('.')
       if (ae[1] === 'json') {
-        console.log(`JSON: ${PATH_IMG}${element}`)
+        console.log(`JSON: ${req.hostname}/imagenes/${element}`)
         var aux = JSON.parse(fs.readFileSync(`${PATH_IMG}${element}`, 'utf8'))
         aImg.entradas.push(aux)
       }
