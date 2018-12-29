@@ -6,7 +6,7 @@ window.addEventListener('load', async e => {
 })
 
 async function actualizaLista () {
-    // const res = await fetch(`${url_base}imagenes/fotos.json`)
+    
   const res = await fetch(`${urlBase}json`)
   const json = await res.json()
 
