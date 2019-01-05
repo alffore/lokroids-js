@@ -1,10 +1,10 @@
 body {
     color: #222;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: Arial, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 main {
-    column-width: 300px;
+    /*column-width: 300px;*/
 }
 
 .article,
