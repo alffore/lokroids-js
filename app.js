@@ -45,9 +45,9 @@ function guardaClasifica (req, res) {
     estatus = 'despierto'
   } else if (aux[0] === 'mdor') {
     estatus = 'dormido'
-  } else if(aux[0] === 'motr'){
-    estatus = 'otro'
   }
+  
+  
 
   var archivo = PATH_IMG + aux[1] + '.json'
 
