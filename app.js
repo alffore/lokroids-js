@@ -52,7 +52,7 @@ function guardaClasifica (req, res) {
   var archivo = PATH_IMG + aux[1] + '.json'
 
   var auxjson = {
-    imagen_url: `${PATH_URL}imagenes/${aux[1]}.jpg`,
+    imagen_url: `imagenes/${aux[1]}.jpg`,
     clasificado: `${estatus}`,
     nimg: `${aux[1]}`,
     id: Number(aux[2]),
