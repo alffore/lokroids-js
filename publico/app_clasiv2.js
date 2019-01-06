@@ -38,6 +38,7 @@ async function actualizaLista () {
 function creaEntrada (entrada) {
   var marcades = ''
   var marcador = ''
+  var marcaotr = ''
 
   var estilobloque = 'article'
 
@@ -52,7 +53,7 @@ function creaEntrada (entrada) {
   }
 
   if (entrada.clasificado === 'otro') {
-    marcador = 'checked'
+    marcaotr = 'checked'
 
   }
 
@@ -62,7 +63,7 @@ function creaEntrada (entrada) {
             <div class="clasificacion">
             <input type="radio" value="despierto" name="estado${entrada.id}" class="mdes" id="mdes_${entrada.nimg}_${entrada.id}" ${marcades}> despierto
             <input type="radio" value="dormido" name="estado${entrada.id}" class="mdor" id="mdor_${entrada.nimg}_${entrada.id}" ${marcador}> dormido
-            <input type="radio" value="otro" name="estado${entrada.id}" class="motr" id="motr_${entrada.nimg}_${entrada.id}" ${marcador}> otro            
+            <input type="radio" value="otro" name="estado${entrada.id}" class="motr" id="motr_${entrada.nimg}_${entrada.id}" ${marcaotr}> otro            
             </div>
           </div>`
 }
