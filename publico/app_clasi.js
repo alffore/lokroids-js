@@ -28,6 +28,10 @@ async function actualizaLista () {
       marcaEstado(this)
     }
 
+    obmotr[i].onclick = function () {
+      marcaEstado(this)
+    }
+
   }
 }
 
