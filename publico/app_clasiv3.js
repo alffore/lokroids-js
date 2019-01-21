@@ -110,7 +110,7 @@ function creaEntrada2(entrada){
     obpon = dotro
   }
 
-  obpon.innerHTML= `<div class="${estilobloque}">
+  obpon.innerHTML= obpon.innerHTM+`<div class="${estilobloque}">
           <div class="foto_id">id: ${entrada.id}</div>
           <div class="imagen_foto"><img src="${entrada.imagen_url}" width="240"></div>
             <div class="clasificacion">
@@ -118,5 +118,5 @@ function creaEntrada2(entrada){
             <input type="radio" value="dormido" name="estado${entrada.id}" class="mdor" id="mdor_${entrada.nimg}_${entrada.id}" ${marcador}> dormido
             <input type="radio" value="otro" name="estado${entrada.id}" class="motr" id="motr_${entrada.nimg}_${entrada.id}" ${marcaotr}> otro            
             </div>
-          </div>`.join('\n')
+          </div>`
 }
