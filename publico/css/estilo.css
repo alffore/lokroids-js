@@ -4,8 +4,16 @@ body {
 }
 
 main {
-    /*column-width: 300px;*/
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    flex-wrap: nowrap;
 }
+
+.dsincla, .ddormido, .ddespierto, .dotro{
+    border: 1px #ccc solid;
+}
+
 
 .article,
 .article_dor,
@@ -35,3 +43,5 @@ main {
 .article_des {
     background-color: rgba(5, 126, 5, 0.3);
 }
+
+
