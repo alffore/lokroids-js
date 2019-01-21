@@ -110,7 +110,7 @@ function creaEntrada2(entrada){
     obpon = dotro
   }
 
-  obpon.innerHTML= obpon.innerHTM+`<div class="${estilobloque}">
+  var cadena=`<div class="${estilobloque}">
           <div class="foto_id">id: ${entrada.id}</div>
           <div class="imagen_foto"><img src="${entrada.imagen_url}" width="240"></div>
             <div class="clasificacion">
@@ -119,4 +119,11 @@ function creaEntrada2(entrada){
             <input type="radio" value="otro" name="estado${entrada.id}" class="motr" id="motr_${entrada.nimg}_${entrada.id}" ${marcaotr}> otro            
             </div>
           </div>`
+
+  if (obpon.innerHTML == 'undefined'){
+    obpon.innerHTML=cadena
+  }else{
+    obpon.innerHTML = obpon.innerHTML + cadena
+  }
+
 }
