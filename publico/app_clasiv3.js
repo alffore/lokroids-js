@@ -120,8 +120,8 @@ function creaEntrada2(entrada){
             </div>
           </div>`
 
-  if (typeof obpon.innerHTML === 'undefined'){
-    obpon.innerHTML=cadena
+  if (typeof obpon.innerHTML === 'undefined' || obpon.innerHTML.length === 0){
+    obpon.innerHTML = cadena
   }else{
     obpon.innerHTML = obpon.innerHTML + cadena
   }
