@@ -84,7 +84,7 @@ function marcaEstado (objEstado) {
 
 
 function creaEntrada2(entrada){
-
+  console.log(entrada)
   var marcades = ''
   var marcador = ''
   var marcaotr = ''
