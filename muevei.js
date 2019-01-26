@@ -7,7 +7,7 @@ var fs = require('fs')
 var PATH_IMG = path.join(__dirname, 'publico/imagenes/')
 //var PATH_IMGC = path.join(__dirname, 'publico/imagenes_clas/')
 
-var PATH_IMGC = '/lokros/imagenes_clas/'
+var PATH_IMGC = '/home/pi/lokros/imagenes_clas/'
 
 
 
@@ -21,6 +21,7 @@ fs.readdir(PATH_IMG, (err, files) => {
     var ae = element.split('.')
 
     if (ae[1] == 'json') {
+	    console.log(`Archivo: ${element}`)
       mueveArchivo(element)
     }
   })
