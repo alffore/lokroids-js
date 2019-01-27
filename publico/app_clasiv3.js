@@ -3,10 +3,10 @@ const urlBase =`//${document.location.host}/`
 
 const main = document.querySelector('main')
 
-const dsincla = document.querySelector(".dsincla")
-const ddormido = document.querySelector(".ddormido")
-const ddespierto = document.querySelector(".ddespierto")
-const dotro = document.querySelector(".dotro")
+const dsincla = document.querySelector("#dsincla")
+const ddormido = document.querySelector("#ddormido")
+const ddespierto = document.querySelector("#ddespierto")
+const dotro = document.querySelector("#dotro")
 
 
 

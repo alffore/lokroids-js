@@ -10,7 +10,7 @@ main {
     flex-wrap: nowrap;
 }
 
-.dsincla, .ddormido, .ddespierto, .dotro{
+#dsincla, #ddormido, #ddespierto, #dotro{
     border: 1px #ccc solid;
 }
 
