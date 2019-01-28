@@ -1,5 +1,5 @@
 /*const urlBase = '//192.168.1.72:3000/' */
-
+var sec =0;
 const urlBase =`//${document.location.host}/`
 
 const main = document.querySelector('main')
@@ -36,7 +36,10 @@ async function actualizaLista () {
 }
 
 function creaEntrada (entrada) {
-  var marcades = ''
+		
+	sec++
+
+	var marcades = ''
   var marcador = ''
   var marcaotr = ''
 
@@ -58,8 +61,8 @@ function creaEntrada (entrada) {
   }
 
   return `<div class="${estilobloque}">
-          <div class="foto_id">id: ${entrada.id}</div>
-          <div class="imagen_foto"><img src="imagenes/${entrada.imagen_url}" width="240"></div>
+          <div class="foto_id"><h3>${sec}</h3> id: ${entrada.id}</div>
+          <div class="imagen_foto"><img src="imagenes/${entrada.imagen_url}"></div>
             <div class="clasificacion">
             <input type="radio" value="despierto" name="estado${entrada.id}" class="mdes" id="mdes_${entrada.nimg}_${entrada.id}" ${marcades}> despierto
             <input type="radio" value="dormido" name="estado${entrada.id}" class="mdor" id="mdor_${entrada.nimg}_${entrada.id}" ${marcador}> dormido
