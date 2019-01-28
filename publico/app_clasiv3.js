@@ -1,7 +1,7 @@
 
 const urlBase =`//${document.location.host}/`
 
-const main = document.querySelector('main')
+//const main = document.querySelector('main')
 
 const dsincla = document.querySelector("#dsincla")
 const ddormido = document.querySelector("#ddormido")
@@ -84,12 +84,12 @@ function marcaEstado (objEstado) {
 
 
 function creaEntrada2(entrada){
-  console.log(entrada)
+  
   var marcades = ''
   var marcador = ''
   var marcaotr = ''
 
-  var obpon= dsincla
+  var obpon = dsincla
 
   var estilobloque = 'article'
 
@@ -126,4 +126,5 @@ function creaEntrada2(entrada){
     obpon.innerHTML = obpon.innerHTML + cadena
   }
 
+  console.log(obpon)
 }
