@@ -8,7 +8,7 @@ const ddormido = document.querySelector("#ddormido")
 const ddespierto = document.querySelector("#ddespierto")
 const dotro = document.querySelector("#dotro")
 
-
+console.log(dsincla)
 
 window.addEventListener('load', async e => {
   actualizaLista()
@@ -126,5 +126,6 @@ function creaEntrada2(entrada){
     obpon.innerHTML = obpon.innerHTML + cadena
   }
 
-  console.log(obpon)
+	
+  console.log("Objeto div: "+obpon.id)
 }
