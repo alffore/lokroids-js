@@ -112,7 +112,7 @@ function creaEntrada2(entrada){
 
   var cadena=`<div class="${estilobloque}">
           <div class="foto_id">id: ${entrada.id}</div>
-          <div class="imagen_foto"><img src="${entrada.imagen_url}" width="240"></div>
+          <div class="imagen_foto"><img src="imagenes/${entrada.imagen_url}" width="240"></div>
             <div class="clasificacion">
             <input type="radio" value="despierto" name="estado${entrada.id}" class="mdes" id="mdes_${entrada.nimg}_${entrada.id}" ${marcades}> despierto
             <input type="radio" value="dormido" name="estado${entrada.id}" class="mdor" id="mdor_${entrada.nimg}_${entrada.id}" ${marcador}> dormido
