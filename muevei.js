@@ -7,7 +7,7 @@ var fs = require('fs')
 var PATH_IMG = path.join(__dirname, 'publico/imagenes/')
 //var PATH_IMGC = path.join(__dirname, 'publico/imagenes_clas/')
 
-var PATH_IMGC = '/home/pi/lokros/imagenes_clas/'
+var PATH_IMGC = '/home/pi/lokros2/imagenes_clas/'
 
 
 
